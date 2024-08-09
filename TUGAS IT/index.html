@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Membuat gambar Responsive</title>
+
+  <style>
+    body {
+      background-color: whitesmoke;
+    }
+
+    .navbar { 
+      overflow: hidden;  
+      background-color: #333; 
+    }
+
+    .navbar a {
+      color: #f2f2f2;
+      text-decoration: none;
+      float: left;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+
+    }
+
+    .navbar a:hover{
+      color: #ccc;
+    }
+
+   div.gallery {
+    border: 1px solid #ccc;
+   }
+
+   div.gallery:hover {
+    border: 1px solid #777;
+   }
+
+   div.gallery img {
+    width: 96%;
+    height: auto;
+    position: relative;
+   }
+
+   div.desc {
+    padding: 15px;
+    text-align: center;
+   }
+
+   * {
+    box-sizing: border-box;
+   }
+
+   .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+   }
+
+   @media only screen and (max-width:700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+   }
+
+   @media only screen and (max-width:500px) {
+    .responsive {
+      width: 100%;
+
+    }
+   }
+
+   .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+   }
+
+   .header {
+    background-color: rgb(165, 165, 165);
+    padding: 20px;
+    text-align: center;
+   }
+
+   .navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #f2f2f2;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-left: 835px;
+    transition: .5s;
+   }
+
+   .navigation .btnLogin-popup:hover {
+   background: #dad0d0;
+   color: #1f1f1f;
+   }
+
+   .wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+   }
+
+   .form-box h2 {
+    font-size: 2cm;
+    color: #777;
+    text-align: center;
+   }
+
+   .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+   }
+
+   .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1cm;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+   }
+
+   .input-box input:focus~label,
+   .input-box input:valid~label {
+    top: -5px
+   }
+
+   .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9cm;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+   }
+
+   .input-box .icon {
+    position: absolute;
+    right: 4px;
+    font-size: 1.2cm;
+    color: #162938;
+    line-height: 57px;
+   }
+
+  </style>
+
+  <body>
+    <div class="header">
+      <h1>Komik Atomic</h1>
+    </div>
+
+    <div class="navbar">
+      <nav class="navigation">
+      <a  target="" href="index.html">Komik Popular</a>
+      <a target="" href="profile.html">Manga</a>
+      <a target="" href="profile.html">Manhwa</a>
+      <a target="" href="profile.html">Manhua</a>
+      <button class="btnLogin-popup">Login</button>
+    </nav>
+    </div>
+
+    <div class="wrapper">
+      <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="login-register">
+            <p>Don't have an account ? <a href="#"></a></p>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="C:\Users\DELL\Documents\Muafa\Tugas\TUGAS IT\pemandangan 1.jpeg">
+          <img src="C:\Users\DELL\Documents\Muafa\Tugas\TUGAS IT\pemandangan 1.jpeg" alt="pemandangan 1" 
+          width="600" height="400">
+        </a>
+        <div class="desc">penambahan deskripsi gambar</div> 
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="C:\Users\DELL\Documents\Muafa\Tugas\TUGAS IT\pemandangan 2.jpeg">
+          <img src="C:\Users\DELL\Documents\Muafa\Tugas\TUGAS IT\pemandangan 2.jpeg" alt="pemandangan 2"
+          width="600" height="400"> 
+        </a>
+        <div class="desc">Gambar pemandangan pantai yang indah</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="C:\Users\DELL\Documents\Muafa\Tugas\TUGAS IT\pemandangan 3.jpeg">
+          <img src="solo_leveling.png" alt="pemandangan 3"
+          width="600" height="400">
+        </a>
+        <div class="desc">Solo Leveling</div>
+            </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="3">
+          <img src="pemandangan 4.jpeg" alt="pemandangan 4"
+          width="600" height="400">
+        </a>
+        <div class="desc">penambahan deskripsi gambar</div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div style="padding: 6px;">
+      <p>Gambar diatas adalah hasil karya seni orang-orang yang mempunyai jiwa seni yang keren abiss....</p>
+    </div>
+
+    // Khusus Buat Java Script Di Bawah //
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+  </body>
+
+  </head>
+</html>
